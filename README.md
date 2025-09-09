@@ -20,13 +20,8 @@
 <div align="center">
 
 ### 🎭 Main Interface
-![Main Interface](https://via.placeholder.com/800x450/1a1a1a/ffffff?text=Google+Doodle+New+Tab+Interface)
 
-### 🎯 Custom Shortcuts with Real Logos
-![Custom Shortcuts](https://via.placeholder.com/400x300/1a1a1a/ffffff?text=ChatGPT+Facebook+GitHub+Logos)
-
-### 📝 Quick Notes Panel
-![Quick Notes](https://via.placeholder.com/400x300/1a1a1a/ffffff?text=Priority+Notes+with+Search)
+<img width="1912" height="925" alt="Screenshot from 2025-09-09 19-22-40" src="https://github.com/user-attachments/assets/42c5ad6d-9faf-42e6-8878-c937c0e8f8ea" />
 
 </div>
 
