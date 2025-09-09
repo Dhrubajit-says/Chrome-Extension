@@ -1272,94 +1272,11 @@ class QuickNotes {
     }
 }
 
-// New Tab functionality (existing code)
-class NewTabManager {
-    constructor() {
-        this.init();
-    }
+// No longer needed - QuickNotes class handles all functionality
 
-    init() {
-        this.bindSearchEvents();
-        this.bindShortcutEvents();
-    }
-
-    bindSearchEvents() {
-        const searchInput = document.getElementById('searchInput');
-        const searchBtn = document.getElementById('searchBtn');
-        const resetBtn = document.getElementById('resetBtn');
-
-        if (searchInput) {
-            searchInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    this.performSearch();
-                }
-            });
-            
-            // Focus on search input when page loads
-            searchInput.focus();
-        }
-
-        if (searchBtn) {
-            searchBtn.addEventListener('click', () => {
-                this.performSearch();
-            });
-        }
-
-        if (resetBtn) {
-            resetBtn.addEventListener('click', () => {
-                if (searchInput) {
-                    searchInput.value = '';
-                    searchInput.focus();
-                }
-            });
-        }
-    }
-
-    bindShortcutEvents() {
-        const shortcuts = document.querySelectorAll('.top-shortcut');
-        shortcuts.forEach(shortcut => {
-            shortcut.addEventListener('click', (e) => {
-                e.preventDefault();
-                const url = shortcut.getAttribute('href');
-                if (url) {
-                    window.open(url, '_blank');
-                }
-            });
-        });
-    }
-
-    performSearch(lucky = false) {
-        const searchInput = document.getElementById('searchInput');
-        const query = searchInput.value.trim();
-        
-        if (!query) return;
-
-        // Check if it's a URL
-        if (this.isUrl(query)) {
-            window.open(query.startsWith('http') ? query : 'https://' + query, '_blank');
-        } else {
-            // Perform Google search
-            const baseUrl = lucky ? 'https://www.google.com/search?btnI=1&q=' : 'https://www.google.com/search?q=';
-            window.open(baseUrl + encodeURIComponent(query), '_blank');
-        }
-        
-        searchInput.value = '';
-    }
-
-    isUrl(text) {
-        try {
-            new URL(text);
-            return true;
-        } catch {
-            return /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/.test(text);
-        }
-    }
-}
-
-// Initialize both apps when DOM is loaded
+// Initialize the Quick Notes app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     window.quickNotes = new QuickNotes();
-    window.newTabManager = new NewTabManager();
 });
 
 // Handle theme-based styling (optional enhancement)
