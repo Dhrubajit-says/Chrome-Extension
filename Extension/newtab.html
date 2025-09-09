@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-layout">
+        <!-- Toggle Button for Quick Notes -->
+        <button class="notes-toggle-btn" id="notesToggleBtn" title="Toggle Quick Notes">
+            <div class="toggle-icon">
+                <svg class="notes-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                </svg>
+                <svg class="close-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </div>
+            <span class="toggle-text">Notes</span>
+        </button>
+
+        <!-- Exact Google New Tab Layout (Left Side) -->
+        <div class="newtab-panel">
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <!-- Official Google Doodle - Quadratic Equation -->
+                <div class="google-doodle-container">
+                    <div class="doodle-logo">
+                        <!-- G with mathematical elements -->
+                        <div class="doodle-letter letter-g1">
+                            <span class="letter-text">G</span>
+                            <div class="math-element variable-x">x</div>
+                        </div>
+                        
+                        <!-- O as a circular graph -->
+                        <div class="doodle-letter letter-o1">
+                            <svg class="parabola-graph" viewBox="0 0 60 60">
+                                <path class="parabola-path" d="M10,50 Q30,10 50,50" stroke="#ea4335" stroke-width="3" fill="none"/>
+                                <circle class="graph-point" cx="30" cy="15" r="2" fill="#ea4335"/>
+                                <circle class="graph-point" cx="20" cy="35" r="1.5" fill="#ea4335"/>
+                                <circle class="graph-point" cx="40" cy="35" r="1.5" fill="#ea4335"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- O with equation elements -->
+                        <div class="doodle-letter letter-o2">
+                            <div class="equation-circle">
+                                <span class="equation-text">ax²</span>
+                            </div>
+                        </div>
+                        
+                        <!-- G with mathematical symbols -->
+                        <div class="doodle-letter letter-g2">
+                            <span class="letter-text">g</span>
+                            <div class="math-element plus-sign">+</div>
+                        </div>
+                        
+                        <!-- L as a coordinate axis -->
+                        <div class="doodle-letter letter-l">
+                            <svg class="axis-svg" viewBox="0 0 40 60">
+                                <line class="y-axis" x1="10" y1="5" x2="10" y2="55" stroke="#34a853" stroke-width="3"/>
+                                <line class="x-axis" x1="5" y1="50" x2="35" y2="50" stroke="#34a853" stroke-width="3"/>
+                                <polygon class="arrow-head" points="10,5 7,12 13,12" fill="#34a853"/>
+                                <polygon class="arrow-head" points="35,50 28,47 28,53" fill="#34a853"/>
+                                <text class="axis-label" x="15" y="15" fill="#34a853" font-size="8">y</text>
+                                <text class="axis-label" x="30" y="45" fill="#34a853" font-size="8">x</text>
+                            </svg>
+                        </div>
+                        
+                        <!-- E with mathematical elements -->
+                        <div class="doodle-letter letter-e">
+                            <div class="equation-container">
+                                <span class="letter-text">e</span>
+                                <div class="floating-equation">
+                                    <span class="equation-part">bx</span>
+                                    <span class="equation-part">+c=0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Animated mathematical elements floating around -->
+                    <div class="floating-math-elements">
+                        <div class="floating-element" style="--delay: 0s; --duration: 4s;">∆</div>
+                        <div class="floating-element" style="--delay: 1s; --duration: 5s;">√</div>
+                        <div class="floating-element" style="--delay: 2s; --duration: 3.5s;">²</div>
+                        <div class="floating-element" style="--delay: 0.5s; --duration: 4.5s;">±</div>
+                        <div class="floating-element" style="--delay: 1.5s; --duration: 3s;">∞</div>
+                        <div class="floating-element" style="--delay: 2.5s; --duration: 4.2s;">π</div>
+                    </div>
+                    
+                    <!-- Main quadratic equation display -->
+                    <div class="main-equation">
+                        <span class="equation-highlight">ax² + bx + c = 0</span>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Search Bar -->
+                <div class="search-wrapper">
+                    <div class="search-input-container">
+                        <div class="search-icon">
+                            <svg viewBox="0 0 24 24" fill="#9aa0a6">
+                                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                            </svg>
+                        </div>
+                        <input type="text" id="searchInput" placeholder="Search Google or type a URL" autocomplete="off">
+                        <div class="search-actions">
+                            <button class="voice-search" title="Search by voice">
+                                <svg viewBox="0 0 24 24" fill="#4285f4">
+                                    <path d="M12 15c1.66 0 2.99-1.34 2.99-3L15 6c0-1.66-1.34-3-3-3S9 4.34 9 6v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 15 6.7 12H5c0 3.42 2.72 6.23 6 6.72V22h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
+                                </svg>
+                            </button>
+                            <button class="camera-search" title="Search by image">
+                                <svg viewBox="0 0 24 24" fill="#34a853">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Suggestions Dropdown -->
+                    <div class="search-suggestions" id="searchSuggestions" style="display: none;">
+                        <div class="suggestion-item">
+                            <svg class="suggestion-icon" viewBox="0 0 24 24" fill="#9aa0a6">
+                                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                            </svg>
+                            <span class="suggestion-text">google search</span>
+                        </div>
+                        <div class="suggestion-item">
+                            <svg class="suggestion-icon" viewBox="0 0 24 24" fill="#9aa0a6">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <span class="suggestion-text">google trends</span>
+                        </div>
+                        <div class="suggestion-item">
+                            <svg class="suggestion-icon" viewBox="0 0 24 24" fill="#9aa0a6">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                            </svg>
+                            <span class="suggestion-text">google news</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Google Search Buttons -->
+                    <div class="google-search-buttons">
+                        <button class="google-btn primary" id="googleSearchBtn">
+                            <span>Google Search</span>
+                        </button>
+                        
+                    </div>
+                </div>
+                
+                <!-- App Shortcuts moved below search -->
+                <div class="app-shortcuts">
+                    <a href="https://github.com" class="app-shortcut">
+                        <div class="icon-container">
+                            <svg viewBox="0 0 24 24" fill="#ffffff">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://maps.google.com" class="app-shortcut">
+                        <div class="icon-container">
+                            <svg viewBox="0 0 24 24" fill="#ffffff">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3" stroke="#000000" stroke-width="1" fill="none"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://youtube.com" class="app-shortcut">
+                        <div class="icon-container">
+                            <svg viewBox="0 0 24 24" fill="#ffffff">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://translate.google.com" class="app-shortcut">
+                        <div class="icon-container">
+                            <svg viewBox="0 0 24 24" fill="#ffffff">
+                                <path d="M12.87 15.07l-2.54-2.51.03-.03c-1.74-1.94-2.98-4.17-3.71-6.53H9.25V4.72h-3.52V3.2h1.8v-.63H5s-.18 0-.18.18V4.72H.25v1.37h3.4c-.74 2.42-1.97 4.69-3.71 6.53l.03.03-2.54 2.51.96.96 3.42-3.41zm8.99-2.69l-3.06-8.15-3.06 8.15h6.12zm-3.06-5.49l2.03 5.49h-4.06l2.03-5.49z"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://gmail.com" class="app-shortcut">
+                        <div class="icon-container">
+                            <svg viewBox="0 0 24 24" fill="#ffffff">
+                                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h3.819l6.545 4.91 6.545-4.91h3.819A1.636 1.636 0 0 1 24 5.457z"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://accounts.google.com" class="app-shortcut">
+                        <div class="icon-container">
+                            <svg viewBox="0 0 24 24" fill="#ffffff">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://drive.google.com" class="app-shortcut">
+                        <div class="icon-container">
+                            <svg viewBox="0 0 24 24" fill="#ffffff">
+                                <path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h10v-2H6V4h7v5h5v3.1l2-2V8l-6-6H6z"/>
+                                <path d="M8 12h8v2H8z"/>
+                                <path d="M8 16h5v2H8z"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://photos.google.com" class="app-shortcut">
+                        <div class="icon-container">
+                            <svg viewBox="0 0 24 24" fill="#ffffff">
+                                <circle cx="12" cy="12" r="3.2"/>
+                                <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <!-- Add Shortcut Button -->
+                    <button class="app-shortcut add-shortcut-btn" id="addShortcutBtn" title="Add new shortcut">
+                        <div class="icon-container">
+                            <svg viewBox="0 0 24 24" fill="#ffffff">
+                                <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                
+                <!-- Add Shortcut Modal -->
+                <div class="add-shortcut-modal" id="addShortcutModal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Add New Shortcut</h3>
+                            <button class="close-modal" id="closeModal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-group">
+                                <label for="shortcutName">Name:</label>
+                                <input type="text" id="shortcutName" placeholder="e.g., Facebook" maxlength="20">
+                            </div>
+                            <div class="input-group">
+                                <label for="shortcutUrl">URL:</label>
+                                <input type="url" id="shortcutUrl" placeholder="https://example.com">
+                            </div>
+                            <div class="popular-shortcuts">
+                                <h4>Popular Shortcuts:</h4>
+                                <div class="popular-grid">
+                                    <button class="popular-shortcut" data-name="Facebook" data-url="https://facebook.com">
+                                        <span>📘</span> Facebook
+                                    </button>
+                                    <button class="popular-shortcut" data-name="Twitter" data-url="https://twitter.com">
+                                        <span>🐦</span> Twitter
+                                    </button>
+                                    <button class="popular-shortcut" data-name="Instagram" data-url="https://instagram.com">
+                                        <span>📷</span> Instagram
+                                    </button>
+                                    <button class="popular-shortcut" data-name="LinkedIn" data-url="https://linkedin.com">
+                                        <span>💼</span> LinkedIn
+                                    </button>
+                                    <button class="popular-shortcut" data-name="Reddit" data-url="https://reddit.com">
+                                        <span>🔶</span> Reddit
+                                    </button>
+                                    <button class="popular-shortcut" data-name="GitHub" data-url="https://github.com">
+                                        <span>🐙</span> GitHub
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn-secondary" id="cancelModal">Cancel</button>
+                            <button class="btn-primary" id="saveShortcut">Add Shortcut</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Notes Section (Right Side) -->
+        <div class="notes-panel">
+            <!-- Modern Header with Stats -->
+            <div class="notes-header">
+                <div class="header-top">
+                    <h1>⚡ Quick Notes</h1>
+                    <div class="stats-badge" id="notesCount">0</div>
+                </div>
+                <div class="header-subtitle">Capture your thoughts instantly</div>
+            </div>
+
+            <!-- Smart Input Section -->
+            <div class="smart-input-section">
+                <!-- Priority Selector (moved to top) -->
+                <div class="priority-selector-top">
+                    <label>Select Priority:</label>
+                    <div class="priority-options">
+                        <button class="priority-btn" data-priority="low">🟢 Low</button>
+                        <button class="priority-btn" data-priority="medium">🟡 Medium</button>
+                        <button class="priority-btn active" data-priority="high">🔴 High</button>
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <input type="text" id="noteInput" placeholder="What's on your mind?" autocomplete="off">
+                        <div class="input-actions">
+                            <button id="voiceBtn" class="action-btn" title="Voice input">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 15c1.66 0 2.99-1.34 2.99-3L15 6c0-1.66-1.34-3-3-3S9 4.34 9 6v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 15 6.7 12H5c0 3.42 2.72 6.23 6 6.72V22h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
+                                </svg>
+                            </button>
+                            <button id="priorityBtn" class="action-btn" title="Change priority">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <button id="addBtn" class="modern-add-btn">
+                        <span class="btn-text">Add</span>
+                        <span class="btn-icon">✨</span>
+                    </button>
+                </div>
+                
+                <!-- Category Selector (simplified) -->
+                <div class="category-selector-bottom">
+                    <div class="category-options">
+                        <button class="category-btn active" data-category="general">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                            </svg>
+                            General
+                        </button>
+                        <button class="category-btn" data-category="work">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14,6V4H10V6H8A2,2 0 0,0 6,8V19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V8A2,2 0 0,0 16,6H14M12,7A2,2 0 0,1 14,9A2,2 0 0,1 12,11A2,2 0 0,1 10,9A2,2 0 0,1 12,7Z"/>
+                            </svg>
+                            Work
+                        </button>
+                        <button class="category-btn" data-category="personal">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                            </svg>
+                            Personal
+                        </button>
+                        <button class="category-btn" data-category="urgent">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                            </svg>
+                            Urgent
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">All Notes</button>
+                    <button class="filter-btn" data-filter="high">🔴 High</button>
+                    <button class="filter-btn" data-filter="medium">🟡 Medium</button>
+                    <button class="filter-btn" data-filter="low">🟢 Low</button>
+                </div>
+            </div>
+
+            <!-- Notes Container with Enhanced Design -->
+            <div class="notes-container" id="notesContainer">
+                <!-- Notes will be dynamically added here -->
+            </div>
+
+            <!-- Quick Stats Footer -->
+            <div class="notes-footer" id="notesFooter">
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalNotes">0</span>
+                        <span class="stat-label">Total</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="todayNotes">0</span>
+                        <span class="stat-label">Today</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="completedNotes">0</span>
+                        <span class="stat-label">Done</span>
+                    </div>
+                </div>
+                <div class="auto-save-indicator" id="autoSaveIndicator">
+                    <span class="save-dot"></span>
+                    <span>Auto-saved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

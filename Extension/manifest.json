@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Google Doodle New Tab - Quick Notes",
+  "version": "1.7.1",
+  "description": "Beautiful Google Doodle-inspired new tab page with quadratic equation animation, enhanced search, and quick notes functionality. Experience the magic of mathematics!",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "author": "Dhrubajit",
+  "homepage_url": "https://github.com/Dhrubajit-says/chrome-extension",
+  "short_name": "Doodle NewTab",
+  "keywords": ["newtab", "google", "doodle", "notes", "productivity", "education", "mathematics"]
+}

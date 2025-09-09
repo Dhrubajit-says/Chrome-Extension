@@ -1,0 +1,31 @@
+{
+  "name": "google-doodle-newtab",
+  "version": "1.7.1",
+  "description": "Beautiful Google Doodle-inspired new tab page with quadratic equation animation and quick notes",
+  "main": "newtab.html",
+  "scripts": {
+    "build": "echo 'Extension is ready for distribution!' && ls -la",
+    "package": "zip -r google-doodle-newtab-v1.7.1.zip . -x '*.git*' 'node_modules/*' '*.DS_Store' 'package-lock.json'",
+    "validate": "echo 'Validating extension structure...' && test -f manifest.json && test -f newtab.html && test -f styles.css && test -f script.js && echo 'All required files present!'",
+    "test": "npm run validate"
+  },
+  "keywords": [
+    "chrome-extension",
+    "new-tab",
+    "google-doodle",
+    "productivity",
+    "notes",
+    "education",
+    "mathematics"
+  ],
+  "author": "Dhrubajit <dhrubajitsays@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dhrubajit-says/chrome-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dhrubajit-says/chrome-extension/issues"
+  },
+  "homepage": "https://github.com/Dhrubajit-says/chrome-extension#readme"
+}
